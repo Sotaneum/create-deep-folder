@@ -11,12 +11,12 @@
 
 You can use [pip]((https://pypi.org/project/deep-folder/)) or just clone and copy the code.
 
-**INSTALL PIP**
+**INSTALL FROM PIP**
 ```bash
 pip install --upgrade deep-folder
 ```
 
-**INSTALL LOCAL**
+**INSTALL FROM LOCAL**
 ```bash
 pip install --upgrade setuptools wheel twine
 python setup.py sdist bdist_wheel

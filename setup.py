@@ -11,7 +11,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="deep-folder",
-    version="1.0.0",
+    version="1.0.2",
     author="sotaneum",
     author_email="gnyontu39@gmail.com",
     description="create or remove a simple folder",
