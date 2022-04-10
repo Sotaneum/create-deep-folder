@@ -23,6 +23,68 @@ python setup.py sdist bdist_wheel
 pip install ./dist/deep-folder-*.tar.gz
 ```
 
+### HOW TO USE
+
+- Create or remove folders.
+    ```py
+    from deepfolder import create, remove
+
+    """
+    directory
+    ./ => folder
+    ./index.html => file
+    """
+
+    # To create a folder "./tmp/startup/loadmap"
+    create("./tmp/startup/laadmap")
+    """
+    directory
+    ./ => folder
+    ./tmp/startup/laadmap => folder (added)
+    ./index.html => file
+    """
+
+    # oh! You entered the wrong folder name! I just want to remove the "laadmap" folder!
+    remove("./tmp/startup/laadmap")
+    """
+    directory
+    ./ => folder
+    ./index.html => file
+    """
+
+    # regenerate.
+    create("./tmp/startup/loadmap")
+    """
+    directory
+    ./ => folder
+    ./tmp/startup/loadmap => folder (added)
+    ./index.html => file
+    """
+    ```
+- Delete folder with files.
+    ```py
+    """
+    directory
+    ./ => folder
+    ./tmp/startup/loadmap => folder
+    ./tmp/startup/loadmap/2021.png => file
+    ./tmp/startup/loadmap/2022.png => file
+    ./tmp/startup/loadmap/next => folder
+    ./tmp/startup/loadmap/next/sotaneum.png => file
+    ./index.html => file
+    """
+
+    # To remove the "startup" folder
+
+    remove("./tmp/startup")
+
+    """
+    directory
+    ./ => folder
+    ./index.html => file
+    """
+    ```
+
 ### LICENSE
 
 __MIT__
