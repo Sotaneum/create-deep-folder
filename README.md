@@ -13,7 +13,7 @@ You can use [pip]((https://pypi.org/project/deep-folder/)) or just clone and cop
 
 **INSTALL PIP**
 ```bash
-pip install --upgrade deepfolder
+pip install --upgrade deep-folder
 ```
 
 **INSTALL LOCAL**
